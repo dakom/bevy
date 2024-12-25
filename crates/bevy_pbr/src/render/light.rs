@@ -140,7 +140,7 @@ pub struct GpuLights {
 // NOTE: When running bevy on Adreno GPU chipsets in WebGL, any value above 1 will result in a crash
 // when loading the wgsl "pbr_functions.wgsl" in the function apply_fog.
 #[cfg(all(feature = "webgl", target_arch = "wasm32", not(feature = "webgpu")))]
-pub const MAX_DIRECTIONAL_LIGHTS: usize = 1;
+pub const MAX_DIRECTIONAL_LIGHTS: usize = 10;
 #[cfg(any(
     not(feature = "webgl"),
     not(target_arch = "wasm32"),
